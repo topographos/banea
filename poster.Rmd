@@ -63,7 +63,7 @@ knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
 ## Methodology
 *  deluge of `legacy surveys` built upon ‘Fragile Crescent’ and CLASS project database
 *  `Spatial Data Science` paradigm
-*  tools of trade: `PostGIS, SQL, R, QGIS, GRASS, WhiteboxTools, Git`
+*  tools of trade: `PostGIS, SQL, R, QGIS, GRASS, WhiteboxTools, Git and Github`
 
 ![Figure 2: Data Science pipeline - a sequence of processing and analysing steps - is the core of project methodological framework [@grolemund_r_2017].](figures/data_science.png){width=100%}
 
@@ -88,11 +88,12 @@ The following section showcases a  reproducible template for an exploration of  
 
 ![Figure 8: An average nearest neighbor (ANN) analysis measures the average distance from each point to its nearest point. The lowest ANN is between 300AC and 600BC. ](figures/ann_k1.png){ width=100% }
 
-# Why R ? 
+# {R}esults
 * integrates space and time (better than GIS)
-* seamless workflow for spatial and non-spatial analysis
+* seamless workflows for spatial and non-spatial analysis
 * GIS bridges
 * automation and reproducibility
+* literate programming
 
 #### https://dispersal.rbind.io/
 
