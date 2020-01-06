@@ -2,7 +2,7 @@
 main_topsize: 0.2 #percent coverage of the poster
 main_bottomsize: 0.1
 #ESSENTIALS
-title: '**The Great Dispersal**  - settlement patterns under Large Territorial Empires'
+title: '**The Great Dispersal**    settlement patterns under Large Territorial Empires'
 author:
   - name: '**Michal Michalski**'
     affil: 1
@@ -84,12 +84,12 @@ The following section showcases a  reproducible template for an exploration of  
 
 ![Figure 6: Aoristic analysis helps to deal with uncertainty of periodization by transforming archaeological phases into equal time blocks. Two periods starting at 300 BC and 300 CA represents peak of settlement within study region [@Crema2012].](figures/aoristic_sum_h.png){ width=100% }
 
-![Figure 7: Calculated site probability occurrence for each 100 years block.](figures/lcp_aorist_maps.png){ width=100% }
+![Figure 7: Calculated site probability occurrence for each 100 years block.](figures/lcp_aorist.gif){ width=100% }
 
 ![Figure 8: An average nearest neighbor (ANN) analysis measures the average distance from each point to its nearest point. The lowest ANN is between 300AC and 600BC. ](figures/ann_k1.png){ width=100% }
 
-# {R}esults
-* integrates space and time (better than GIS)
+# Why {R}
+* R integrates space and time (better than GIS)
 * seamless workflows for spatial and non-spatial analysis
 * GIS bridges
 * automation and reproducibility
