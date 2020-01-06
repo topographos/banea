@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>The Great Dispersal - settlement patterns under Large Territorial Empires</title>
+
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 36in 48in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 36in;
+height: 48in;
+text-align: justify;
+font-size: 25pt;
+line-height: 1.05;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #204B5324;
+color: #204B53;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #204B5320;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 20px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 36in;
+height: calc(48in *  (1 - 0.2 - 0.1 - 0.01) );
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+column-gap: 0;
+padding-left: 0cm;
+padding-right: 0cm;
+/* -webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%; */
+-webkit-column-rule-style: none;
+-moz-column-rule-style: none;
+column-rule-style: none;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+background-color: #ffffff;
+font-family: Lato;
+margin-top: calc(48in *  0.2 );
+padding-top: 1em;
+padding-bottom: 1em;
+}
+span.citation {
+  color: #204B53;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #204B53;
+}
+#title {
+font-size: 60pt;
+text-align: left;
+margin: 0;
+line-height: 98%;
+border-bottom: 0;
+font-weight: normal;
+background: 0;
+}
+#author {
+color:#204B53;
+margin: 0;
+line-height: 85%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 0.1em;
+color: ;
+font-style: italic;
+font-size: 25px;
+margin: 0;
+}
+sup {
+color: #914646;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author {
+text-align: left;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #204B53;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+text-align: left;
+}
+.outer h1, h2, h3, h4, h5, h6 {
+text-align: center;
+margin: 0;
+font-weight: bold;
+}
+.section h1 {
+  text-align:center;
+  padding-bottom:5px;
+  background:
+    linear-gradient(
+      to left,
+      #ffffff 1%,
+      #ffffff 20%,
+      #204B5375 33%,
+      #204B53 50%,
+      #204B5375 66%,
+      #ffffff 80%,
+      #ffffff 99%
+    )
+    left
+    bottom
+    #ffffff
+    no-repeat;
+  background-size:100% 5px ;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p, .level2 {
+color: #000000;
+}
+.outer ol {
+padding-left: 8%;
+padding-right: 8%;
+text-align: left;
+}
+.main {
+width: 36in;
+height: calc(48in * 0.2);
+position: absolute;
+background-color: #204B53;
+color: #ffffff90;
+font-family: Lato;
+background-image: linear-gradient(#204B53 50%,#204B53);
+}
+.main strong {
+color: #ffffff;
+}
+.main strong > sup {
+color: #ffffff;
+}
+.main sup {
+color: #ffffff90;
+}
+#main-img-left {
+width: 10%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+#main-img-center {
+width: 10%;
+left: calc(36in * 0.45);
+bottom: 0.5in;
+position: absolute;
+}
+#main-img-right {
+width: 10%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+font-size: 140pt;
+font-family: Lato;
+text-align: center;
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+margin-left: 1em;
+}
+.fab {
+color: #00000030;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000030;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000030;
+font-size: 35px;
+}
+.envelope {
+color: #00000030;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 36in;
+height: 48in;
+padding: 0cm;
+}
+.main_bottom {
+width: 36in;
+height: calc(48in * 0.1);
+margin-top: calc(48in * (1 - 0.1));
+position: absolute;
+background-color: #204B53;
+background-image: linear-gradient(#204B53 10%, #204B53);
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.orcid img {
+  width: 3%;
+}
+.emphasis {
+  background-color: #008080;
+  color: #ffffff;
+  border: solid #0b2045 3mm;
+  margin: 1em;
+  padding-left: 0;
+  padding-right: 0;
+}
+.emphasis h1 {
+  font-weight: bold;
+  background: none;
+  background-color: #0b2045;
+  padding-bottom: 5mm;
+  padding-top: 1mm;
+  margin-top: -1mm;
+  margin-right: -1mm;
+  margin-left: -1mm;
+}
+.emphasis blockquote {
+  border: 0;
+}
+.emphasis ol {
+  padding: 0;
+  padding-left: 8%;
+  font-size: 100%;
+  font-weight: bold;
+}
+.emphasis p {
+  color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+
+<div class="column outer">
+<div class="section">
+<h1 id="title"><strong>The Great Dispersal</strong> - settlement patterns under Large Territorial Empires</h1><br>
+<h3 id="author" class="author">
+
+<strong>Michal Michalski</strong><sup> 1</sup><br>
+<a class="twitter" href="https://mobile.twitter.com/topographos2"><i class="fab fa-twitter"></i>&nbsp;&nbsp;@topographos2</a><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:michal.m.michalski@durham.ac.uk" class="email">michal.m.michalski@durham.ac.uk</a> <br>
+</h3>
+
+<h5 id="author_extra", class="author_extra">
+</h5>
+
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> Department of Archaeology, Durham University
+</p>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>The landscape of the Levant and Northern Mesopotamia went through a significant structural change in the Late Bronze and Iron Age, termed as ‘The Great Dispersal’ <span class="citation">(Wilkinson <a href="#ref-wilkinson_archaeological_2003">2003</a>)</span>. The tell-dominated landscape was superseded by smaller settlements and occasional large cities and new settlements spread into previously uninhabited areas.
+The dispersal pattern has been attributed to political activity, namely, centralisation of territorial empires.</p>
+<div class="figure">
+<img src="figures/assyria_empire.png" alt="Figure 1: Politcal landscape of the northern Fertile Crescent at the beginning of the 9th century BCE - after (Baudains et al. 2015)." style="width:100.0%" />
+<p class="caption">Figure 1: Politcal landscape of the northern Fertile Crescent at the beginning of the 9th century BCE - after <span class="citation">(Baudains et al. <a href="#ref-Baudains_2015">2015</a>)</span>.</p>
+</div>
+<div id="objectives" class="section level2">
+<h2>Objectives</h2>
+<ul>
+<li>quantify settlements dispersion in time and space</li>
+<li>characterise rural settlements and their relationship with imperial infrastructure</li>
+<li>explore political, social and symbolic meaning of the landscape change</li>
+</ul>
+</div>
+<div id="methodology" class="section level2">
+<h2>Methodology</h2>
+<ul>
+<li>deluge of <code>legacy surveys</code> built upon ‘Fragile Crescent’ and CLASS project database</li>
+<li><code>Spatial Data Science</code> paradigm</li>
+<li>tools of trade: <code>PostGIS, SQL, R, QGIS, GRASS, WhiteboxTools, Git</code></li>
+</ul>
+<div class="figure">
+<img src="figures/data_science.png" alt="Figure 2: Data Science pipeline - a sequence of processing and analysing steps - is the core of project methodological framework (Grolemund and Wickham 2017)." style="width:100.0%" />
+<p class="caption">Figure 2: Data Science pipeline - a sequence of processing and analysing steps - is the core of project methodological framework <span class="citation">(Grolemund and Wickham <a href="#ref-grolemund_r_2017">2017</a>)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exploratory-data-analysis" class="section level1">
+<h1>Exploratory Data Analysis</h1>
+<p><em>“detect the expected and discover unexpected”</em> - <span class="citation">(Thomas and Cook <a href="#ref-VA1">2005</a>)</span></p>
+<p>Exploratory Data Analysis is a process of <code>thinking with data</code>. The objective is to understand the data through data transformation, visualization and modelling to ask the right questions.
+The following section showcases a reproducible template for an exploration of <code>archaeological survey</code>.</p>
+<div class="figure">
+<img src="figures/dem_rayshader.png" alt="Figure 3: The Land of Carchemish Project has carried fieldwork in the Sajur triangle region from 2006 to 2010. The project has centred around important site of Carchemish located on the Syrian-Turkish border." style="width:100.0%" />
+<p class="caption">Figure 3: The Land of Carchemish Project has carried fieldwork in the Sajur triangle region from 2006 to 2010. The project has centred around important site of Carchemish located on the Syrian-Turkish border.</p>
+</div>
+<div class="figure">
+<img src="figures/lcp_elev_map.png" alt="Figure 4: The LCP has recover a total of 80 sites from Upper Palaeolithic to Late Islamic periods - (Lawrence and Ricci 2016)" style="width:100.0%" />
+<p class="caption">Figure 4: The LCP has recover a total of 80 sites from Upper Palaeolithic to Late Islamic periods - <span class="citation">(Lawrence and Ricci <a href="#ref-Lawrence_2016">2016</a>)</span></p>
+</div>
+<div class="figure">
+<img src="figures/geom_plot_all.png" alt="Figure 5: The physical landscape of the study region consists of the Euphrates floodplain, the lower Euphrates terraces, limestone slopes incised by rivers valleys and the upland plains." style="width:100.0%" />
+<p class="caption">Figure 5: The physical landscape of the study region consists of the Euphrates floodplain, the lower Euphrates terraces, limestone slopes incised by rivers valleys and the upland plains.</p>
+</div>
+<div class="figure">
+<img src="figures/aoristic_sum_h.png" alt="Figure 6: Aoristic analysis helps to deal with uncertainty of periodization by transforming archaeological phases into equal time blocks. Two periods starting at 300 BC and 300 CA represents peak of settlement within study region (Crema 2012)." style="width:100.0%" />
+<p class="caption">Figure 6: Aoristic analysis helps to deal with uncertainty of periodization by transforming archaeological phases into equal time blocks. Two periods starting at 300 BC and 300 CA represents peak of settlement within study region <span class="citation">(Crema <a href="#ref-Crema2012">2012</a>)</span>.</p>
+</div>
+<div class="figure">
+<img src="figures/lcp_aorist_maps.png" alt="Figure 7: Calculated site probability occurrence for each 100 years block." style="width:100.0%" />
+<p class="caption">Figure 7: Calculated site probability occurrence for each 100 years block.</p>
+</div>
+<div class="figure">
+<img src="figures/ann_k1.png" alt="Figure 8: An average nearest neighbor (ANN) analysis measures the average distance from each point to its nearest point. The lowest ANN is between 300AC and 600BC." style="width:100.0%" />
+<p class="caption">Figure 8: An average nearest neighbor (ANN) analysis measures the average distance from each point to its nearest point. The lowest ANN is between 300AC and 600BC.</p>
+</div>
+</div>
+<div id="why-r" class="section level1">
+<h1>Why R ?</h1>
+<ul>
+<li>integrates space and time (better than GIS)</li>
+<li>seamless workflow for spatial and non-spatial analysis</li>
+<li>GIS bridges</li>
+<li>automation and reproducibility</li>
+</ul>
+<div id="httpsdispersal.rbind.io" class="section level4">
+<h4><a href="https://dispersal.rbind.io/" class="uri">https://dispersal.rbind.io/</a></h4>
+</div>
+<div id="references" class="section level4 unnumbered">
+<h4>References</h4>
+<div id="refs" class="references">
+<div id="ref-Baudains_2015">
+<p>Baudains, Peter, Silvie Zamazalová, Mark Altaweel, and Alan Wilson. 2015. “Modeling Strategic Decisions in the Formation of the Early Neo-Assyrian Empire.” <em>Cliodynamics: The Journal of Quantitative History and Cultural Evolution</em> 6 (July).</p>
+</div>
+<div id="ref-Crema2012">
+<p>Crema, Enrico R. 2012. “Modelling Temporal Uncertainty in Archaeological Analysis.” <em>Journal of Archaeological Method and Theory</em>.</p>
+</div>
+<div id="ref-grolemund_r_2017">
+<p>Grolemund, Garrett, and Hadley Wickham. 2017. <em>R for Data Science</em>. <a href="http://r4ds.had.co.nz/">http://r4ds.had.co.nz/</a>.</p>
+</div>
+<div id="ref-Lawrence_2016">
+<p>Lawrence, Dan, and Andrea Ricci. 2016. “Long-Term Settlement Trends in the Birecik-Carchemish Sector.” In <em>Carchemish in Context</em>, 4:38–67. Oxbow Books.</p>
+</div>
+<div id="ref-VA1">
+<p>Thomas, James J., and Kristin A. Cook. 2005. <em>Illuminating the Path: The Research and Development Agenda for Visual Analytics</em>. Paperback; National Visualization; Analytics Ctr.</p>
+</div>
+<div id="ref-wilkinson_archaeological_2003">
+<p>Wilkinson, T J. 2003. <em>Archaeological Landscapes of the Near East</em>. Tucson.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="main">
+<p>Reproducible <strong>{R}</strong>chaeological Survey</p>
+</div>
+<div class="main_bottom">
+<img id="main-img-left" src=>
+<img id="main-img-center" src=figures/qr_code.png>
+<img id="main-img-right" src=>
+</div>
+</div>
+
+
+
+</body>
+</html>
