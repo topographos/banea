@@ -1,0 +1,13 @@
+@inbook{Lawrence_2016,
+ ISBN = {9781785701115},
+ URL = {http://www.jstor.org/stable/j.ctt1kw29z6.8},
+ abstract = {Over the past three decades the construction of the Birecik and Carchemish Dams in Turkey and the Tishrin Dam in Syria has led to an explosion of archaeological work along the Middle Euphrates valley. More recently, scholars have begun to investigate the landscapes outside the river valley, increasing our understanding of settlement dynamics in the wider region. This paper makes use of remote sensing techniques, published excavation and survey reports and recent archaeological survey undertaken as part of the Land of Carchemish Project to reconstruct settlement and landscape trajectories to the north and south of Carchemish, across the modern border},
+ author = {Dan Lawrence and Andrea Ricci},
+ booktitle = {Carchemish in Context},
+ pages = {38--67},
+ publisher = {Oxbow Books},
+ title = {Long-term settlement trends in the Birecik-Carchemish Sector},
+ volume = {4},
+ year = {2016}
+}
+
