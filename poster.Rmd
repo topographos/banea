@@ -79,7 +79,7 @@ The following section showcases a  reproducible template for an exploration of  
 
 ![Figure 4: The LCP has recover a total of 80 sites from Upper Palaeolithic to  Late Islamic periods - [@Lawrence_2016]](figures/lcp_elev_map.png){width=100%}
 
-![Figure 5: The physical landscape of the study region consists of the Euphrates floodplain, the lower Euphrates terraces, limestone slopes incised by rivers valleys and the upland plains.](figures/geom_plot_all.png){ width=100% }
+![Figure 5: The physical landscape of the study region consists of the Euphrates floodplain, the lower Euphrates terraces, limestone slopes incised by rivers valleys and the upland plains.](figures/geom_by_cnt.gif){ width=100% }
 
 
 ![Figure 6: Aoristic analysis helps to deal with uncertainty of periodization by transforming archaeological phases into equal time blocks. Two periods starting at 300 BC and 300 CA represents peak of settlement within study region [@Crema2012].](figures/aoristic_sum_h.png){ width=100% }
